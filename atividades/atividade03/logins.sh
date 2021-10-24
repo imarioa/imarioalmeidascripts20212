@@ -1,3 +1,4 @@
+# Correção: 2,0
 grep -E -v 'sshd' auth.log
 grep -E 'sshd.*Accepted.*\bj' auth.log 
 grep -E ' session opened.*root' auth.log
