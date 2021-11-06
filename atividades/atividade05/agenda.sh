@@ -16,12 +16,11 @@ case $acao in
             fi
             ;;
         remover)
-            if grep "$param1" agenda.db >> /dev/null
+            if grep "$param1" agenda.db &> /dev/null 
             then 
-                grep "$param1" agenda.db | cut -d: -f1 > /tmp/ex
+                grep "$param1" agenda.db | cut -d: -f1 > /tmp/ex 2> /dev/null
                 param2=$( cat /tmp/ex )
-                grep -v "$param1" agenda.db > /tmp/ex 2> /dev/null
-                mv /tmp/ex agenda.db
+                sed -i "/$param1/d" agenda.db 
                 echo "Usuario $param2 removido"
             else
                 echo "Usuário não existe!!!"
