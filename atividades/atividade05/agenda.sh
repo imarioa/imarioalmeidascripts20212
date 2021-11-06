@@ -17,13 +17,14 @@ case $acao in
             ;;
         remover)
             if grep "$param1" agenda.db >> /dev/null
-            then
-                sed -r '/${param1}/d' agenda.db > /tmp/ex 2> /dev/null
+            then 
+                grep "$param1" agenda.db | cut -d: -f1 > /tmp/ex
+                param2=$( cat /tmp/ex )
+                grep -v "$param1" agenda.db > /tmp/ex 2> /dev/null
                 mv /tmp/ex agenda.db
-                echo "Removido"
-                cat agenda.db
+                echo "Usuario $param2 removido"
             else
-                echo "Teste 1"
+                echo "Usuário não existe!!!"
             fi
             ;;
         listar)
@@ -35,5 +36,5 @@ case $acao in
             fi
             ;;
         *)
-            echo "Teste 2"
+            echo "Comando inválido"
 esac
