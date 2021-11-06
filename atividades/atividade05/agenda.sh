@@ -23,7 +23,7 @@ case $acao in
                 echo "Removido"
                 cat agenda.db
             else
-                echo "Dale"
+                echo "Teste 1"
             fi
             ;;
         listar)
@@ -35,5 +35,5 @@ case $acao in
             fi
             ;;
         *)
-            echo "Dale"
+            echo "Teste 2"
 esac
