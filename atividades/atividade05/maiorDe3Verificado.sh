@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 0,5
 param1=$1
 param2=$2
 param3=$3

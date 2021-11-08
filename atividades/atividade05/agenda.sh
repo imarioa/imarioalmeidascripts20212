@@ -1,4 +1,6 @@
 #!/bin/bash
+# Correção: 1,5
+
 acao=$1
 param1=$2
 param2=$3
