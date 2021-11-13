@@ -9,6 +9,6 @@ do
     MEDIA=$(echo "$SOMA * 0.1" | bc)
     echo "$(sed -n "$var p" $IPS) ${MEDIA}ms" >> ipstemp.txt
 done
-sort -r -t' ' -k2 ipstemp.txt
+sort -r -n -t' ' -k2 ipstemp.txt
 rm ipstemp.txt temp.txt
 
