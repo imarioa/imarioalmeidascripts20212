@@ -1,4 +1,6 @@
 #!/bin/bash
+# Correção: 0,5
+# Reclama de um erro de sintaxe. Não ordena a saída.
 IPS=$1
 N_LINHAS=$(cat $1 | wc -l)
 

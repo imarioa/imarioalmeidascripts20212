@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 1,0
 mkdir cinco
 for var in $(seq 5)
 do
