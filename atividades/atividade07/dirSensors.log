@@ -1,0 +1,12 @@
+[20-11-2021 19:36:05] Alteração! 4->5. Adicionados: teste4.txt
+[20-11-2021 19:37:12] Alteração! 5->0. Removidos: teste1.txt, teste2.txt, teste3.txt, teste4.txt, teste.txt
+[20-11-2021 19:37:20] Alteração! 0->1. Adicionados: teste4.txt
+[20-11-2021 19:37:22] Alteração! 1->2. Adicionados: teste3.txt
+[20-11-2021 19:37:24] Alteração! 2->3. Adicionados: teste2.txt
+[20-11-2021 19:37:26] Alteração! 3->4. Adicionados: teste1.txt
+[20-11-2021 19:37:48] Alteração! 4->3. Removidos: teste1.txt
+[20-11-2021 19:39:01] Alteração! 4->5. Adicionados: teste.txt
+[20-11-2021 19:39:07] Alteração! 5->6. Adicionados: teste1.txt
+[20-11-2021 19:39:13] Alteração! 6->9. Adicionados: teste2.txt, teste3.txt, teste4.txt
+[20-11-2021 19:39:19] Alteração! 9->12. Adicionados: teste5.txt, teste6.txt, teste7
+[20-11-2021 19:39:31] Alteração! 12->4. Removidos: teste1.txt, teste2.txt, teste3.txt, teste4.txt, teste5.txt, teste6.txt, teste7, teste.txt
