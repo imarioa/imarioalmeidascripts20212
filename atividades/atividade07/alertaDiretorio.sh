@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 1,0
 
 INTERVALO=$1
 DIR=$2
