@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 0,3. A saída não está ordenada.
 
 declare -A PALAVRAS
 declare -A QTD
