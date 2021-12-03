@@ -10,9 +10,7 @@ ip="NULL"
 adicionar(){
 NOMEDAMAQUINA=$1
 IP=$2
-
     echo "$NOMEDAMAQUINA     $IP" >> hosts.db
-
 }
 
 remover(){
@@ -29,7 +27,6 @@ BUSCAREVERSA=$2
     else
         grep "$BUSCAR" hosts.db | cut -f6 -d" "
     fi
-
 }
 
 lista(){
@@ -41,7 +38,7 @@ lista(){
 
 
 
-while getopts "a:d:i:lr:" OPTVAR
+while getopts "a:d:i:r:l" OPTVAR
 do
     if  [ "$OPTVAR" == "a" ]
     then
@@ -50,6 +47,7 @@ do
     if  [ "$OPTVAR" == "d" ]
     then   
         remover $OPTARG
+        exit
     fi
     if  [ "$OPTVAR" == "i" ]
     then
@@ -57,18 +55,21 @@ do
         if [ "$nome" != "NULL" ] && [ "$ip" != "NULL" ]
         then
             adicionar $nome $ip
+            exit
         fi
     fi
     if  [ "$OPTVAR" == "r" ]
     then
         ip=$OPTARG
         procurar $ip $OPTVAR
+        exit
 
     fi
     if  [ "$OPTVAR" == "l" ]
     then
         lista
+        exit
     fi
 done    
 
-
+procurar $1
