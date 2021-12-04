@@ -38,7 +38,7 @@ lista(){
 
 
 
-while getopts "a:d:i:r:l" OPTVAR
+while getopts ":i:d:a:r:l" OPTVAR
 do
     if  [ "$OPTVAR" == "a" ]
     then
@@ -56,6 +56,9 @@ do
         then
             adicionar $nome $ip
             exit
+        else
+            echo "Comando inválido!"
+            exit
         fi
     fi
     if  [ "$OPTVAR" == "r" ]
@@ -70,6 +73,20 @@ do
         lista
         exit
     fi
+    if [ "$OPTVAR" == "?" ]
+    then
+        echo "Digite um parâmetro válido!"
+        exit
+    fi
+    if [ "$OPTVAR" == ":" ]
+    then
+        echo "Comando inválido"
+        exit
+    fi
 done    
-
-procurar $1
+if [ ${#1} -ge 1 ]
+then
+    procurar $1
+else
+    echo "Parâmetro inválido!"
+fi
