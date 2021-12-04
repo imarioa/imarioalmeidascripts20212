@@ -10,7 +10,7 @@ ip="NULL"
 adicionar(){
 NOMEDAMAQUINA=$1
 IP=$2
-    echo "$NOMEDAMAQUINA     $IP" >> hosts.db
+    echo "${NOMEDAMAQUINA},${IP}" >> hosts.db
 }
 
 remover(){
@@ -23,14 +23,14 @@ BUSCAR=$1
 BUSCAREVERSA=$2
     if [ "$BUSCAREVERSA" == "r" ]
     then
-        grep "${BUSCAR}" hosts.db | cut -f1 -d" "
+        grep "${BUSCAR}" hosts.db | cut -f1 -d","
     else
-        grep "$BUSCAR" hosts.db | cut -f6 -d" "
+        grep "$BUSCAR" hosts.db | cut -f2 -d","
     fi
 }
 
 lista(){
-    cat hosts.db
+    column -t -s "," hosts.db | sort -k2
 }
 
 
