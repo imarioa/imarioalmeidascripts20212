@@ -15,7 +15,9 @@ IP=$2
 
 remover(){
 NOMEDAMAQUINA=$1
-    sed -i "/$NOMEDAMAQUINA/d" hosts.db
+    grep -wv "$NOMEDAMAQUINA" hosts.db > tmp.db
+    cat tmp.db > hosts.db
+    rm tmp.db
 }
 
 procurar(){
