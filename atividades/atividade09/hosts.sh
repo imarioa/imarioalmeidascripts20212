@@ -23,9 +23,9 @@ BUSCAR=$1
 BUSCAREVERSA=$2
     if [ "$BUSCAREVERSA" == "r" ]
     then
-        grep "${BUSCAR}" hosts.db | cut -f1 -d","
+        grep -w "${BUSCAR}" hosts.db | cut -f1 -d","
     else
-        grep "$BUSCAR" hosts.db | cut -f2 -d","
+        grep -w "$BUSCAR" hosts.db | cut -f2 -d","
     fi
 }
 
@@ -82,6 +82,10 @@ do
     then
         echo "Comando inválido"
         exit
+    fi
+    if [ "$OPTIND" -eq 1 ]
+    then 
+        echo "finalmente"
     fi
 done    
 if [ ${#1} -ge 1 ]
