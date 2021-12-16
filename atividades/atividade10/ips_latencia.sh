@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 0,0. Você poderia ter usado alguns comandos shell dentro do awk, mas não o contrário.
 IPS=$1
 N_LINHAS=$(cat $IPS | wc -l)
 
