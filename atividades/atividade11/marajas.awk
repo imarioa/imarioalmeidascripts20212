@@ -1,3 +1,4 @@
+# Correção: 1,0. Tudo ok no registro da AWS Academy.
 BEGIN{
     i = 1
 }
