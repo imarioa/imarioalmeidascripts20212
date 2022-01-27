@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 2,0.
 key=$1
 
 echo "Criando servidor de Monitoramento..."
