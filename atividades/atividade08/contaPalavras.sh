@@ -16,5 +16,8 @@ do
 done
 for var in ${PALAVRAS[@]}
 do
-    echo $var: ${QTD[$var]}
+    echo $var: ${QTD[$var]} >> palavrascontadas.txt
 done
+
+sort -n palavrascontadas.txt
+rm palavrascontadas.txt

@@ -10,5 +10,4 @@ do
             echo $i >> cinco/dir$var/arq$i.txt
         done
     done
-   
 done
