@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 0,5. Só criou a primeira instância, sem sequer ter criado o banco.
 key=$1
 usuario=$2
 senha=$3
