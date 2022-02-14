@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 1,0. Acho que o seu wp-config.php não foi atualizado. Ao executar e abrir a página, ainda pede as informações do banco de dados.
 key=$1
 usuario=$2
 senha=$3
